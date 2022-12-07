@@ -1,38 +1,190 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Great+Vibes&family=Montserrat&family=Poiret+One&family=Poppins:ital,wght@0,300;0,400;1,900&display=swap');
+
+main {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  line-height: 20px;
+}
+
+.container {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background: #333;
+}
+
+.logo {
+  text-align: center;
+  margin: 20px 20px 20px 30px;
+  color: white;
+  font-family: 'Great Vibes', cursive;
+  letter-spacing: 5px;
+}
+
+.sign {
+  display: inline;
+  margin: 15px 30px 15px 15px;
+  padding: 10px;
+  color: white;
+  font-size: 15px;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: #f1b951;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.navbar ul li {
+  display: inline;
+  list-style: none;
+  margin: 10px;
+  padding: 20px;
+  color: black;
+}
+
+.hero img {
+  width: 100%;
+  height: 20%;
+  position: relative;
+}
+
+.title {
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  font-family: 'Great Vibes', cursive;
+  font-size: 40px;
+  padding: 10px;
+  line-height: 60px;
+  color: black;
+  letter-spacing: 2px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+}
+
+.img-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80vh;
+}
+
+.img-container div {
+  width: 400px;
+  height: 400px;
+  margin: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.img-container div img {
+  width: 100%;
+  height: 500px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+footer {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  width: 100%;
+  height: 20vh;
+  margin-top: 20px;
+  border: 2px solid #eee;
+  background: #333;
 }
 
-.App-link {
-  color: #61dafb;
+footer .logo-small {
+  font-size: 25px;
+  font-family: 'Great Vibes', cursive;
+  color: #F5DEB3;
+  text_align: center;
+  letter-spacing: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.sign1 {
+  display: inline;
+  margin: 20px;
+  padding: 10px;
+  color: #F5DEB3;
+}
+
+/*Media Queries*/
+
+@media (max-width:1096px) {
+  .sign {
+    margin: 10px;
+    padding: 5px;
+    font-size: 16px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .title {
+    top: 30%;
+    left: 70%;
+    font-size: 25px;
+    line-height: 40px;
+  }
+
+  .new {
+    top: 40%;
+    left: 80%;
+    font-size: 20px;
+    padding: 10px;
+    line-height: 40px;
+  }
+
+  .img-container {
+    width: 100%;
+    height: 30vh;
+    margin-top: 20px;
+  }
+
+  .img-container div {
+    width: 100%;
+    height: 200px;
+    font-size: 12px;
+  }
+
+  .img-container div img {
+    width: 100%;
+    height: 200px;
+  }
+}
+
+@media (max-width:768px) {
+  .title {
+    top: 25%;
+    left: 70%;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .new {
+    top: 35%;
+    left: 80%;
+    font-size: 16px;
+    padding: 5px;
+    line-height: 30px;
   }
 }
