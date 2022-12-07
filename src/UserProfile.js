@@ -1,23 +1,20 @@
 //Import React
 import React from 'react'
 
-//UserProfile is a class component 
+//UserProfile is a function based component 
 //It shows a button so user can click on it and logout
-class UserProfile extends React.Component {
+const UserProfile = ()=> {
   // Event handler for button
-  // This syntax ensures `this` is bound within handleClick.
-  handleClick = () => {
+  const handleClick = () => {
     alert('User has logged out')
   };
   //It shows Logout button
   //Event handler is attached to onClick event
-  render() {
-    return (
-      <button onClick={this.handleClick}>
+  return (
+      <button onClick={handleClick}>
         Logout
       </button>
-    );
-  }
+  )
 }
 //Export UserProfile so it can be used by other components
 export default UserProfile
