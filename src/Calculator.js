@@ -25,26 +25,19 @@ function Calculator(props) {
     
   }
 
-  useEffect(()=>{
-    total = getTotal()
-    console.log(`Total=${total}`)
-  },[shoppingTotal,months])
-
   return (
       <main>
-          <form>
-              <label>
-                  {/*Input field for user to enter shopping total - event handler is attached to onChange event*/}
-                  Shopping Total:<input type="text" onChange={(e)=>setShoppingTotal(e.target.value)}/>
-              </label>
-              <label>
-                  {/*Input field for user to enter months - event handler is attached to onChange event*/}
-                  Months:<input type="text" onChange={(e)=>setMonths(e.target.value)}/>
-              </label>
-          </form>
+          <label>
+              {/*Input field for user to enter shopping total - event handler is attached to onChange event*/}
+              Shopping Total:<input type="text" onChange={(e)=>setShoppingTotal(e.target.value)}/>
+          </label>
+          <label>
+              {/*Input field for user to enter months - event handler is attached to onChange event*/}
+              Months:<input type="text" onChange={(e)=>setMonths(e.target.value)}/>
+          </label>
           {/*Functional stateless component to show total amount to be paid */}
           <div>
-            <p>Amount to be Paid:{total}</p>
+            <p>Amount to be Paid:{total=getTotal()}</p>
           </div>
       </main>
   )
